@@ -5,8 +5,7 @@ spring:
       client:
         registration:
           google:
-            client-id: 930756101628-kighi06idk7tfnap1o7dtm02sgtjt7cc.apps.googleusercontent.com
-            client-secret: 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
+
             scope: profile, email
 
 #          naver:
