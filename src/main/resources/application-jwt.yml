@@ -1,0 +1,10 @@
+jwt:
+  secretKey: sexsesxxsdfyasu1001013923yasyosexhtpqnne_1uXslhpyasho11nnoiqo9u-23n
+
+  access:
+    expiration: 3600000
+    header: Authorization
+
+  refresh:
+    expiration: 1209600000
+    header: Authorization-refresh
