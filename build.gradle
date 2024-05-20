@@ -33,6 +33,7 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'com.auth0:java-jwt:4.2.1'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	implementation 'com.mysql:mysql-connector-j'
 }
 
 tasks.named('test') {
