@@ -26,6 +26,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 /**
  * 인증은 CustomJsonUsernamePasswordAuthenticationFilter에서 authenticate()로 인증된 사용자로 처리
@@ -67,7 +68,8 @@ public class SecurityConfiguration {
                 .authorizeRequests(authorize ->
                         authorize
                                 .requestMatchers("/", "/css/**", "/images/**", "/js/**", "/favicon.ico", "/h2-console/**").permitAll()
-                                .requestMatchers("/sign-up").permitAll() // Access to membership registration
+                                .requestMatchers(new AntPathRequestMatcher("/oauth2/authorization/google")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/sign-up")).permitAll()// Access to membership registration
                                 .anyRequest().authenticated() // Only authenticated users can access all paths other than the above
 
 

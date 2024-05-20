@@ -17,6 +17,11 @@ public class UserController {
         return "회원가입 성공";
     }
 
+    @GetMapping("/oauth2/sign-up")
+    public String oauth2SingUp() {
+        return "static/oauth2Sign.html";
+    }
+
     @GetMapping("/jwt-test")
     public String jwtTest() {
         return "jwtTest 요청 성공";
