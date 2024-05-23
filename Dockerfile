@@ -1,7 +1,7 @@
 FROM openjdk:17-alpine
 
 # JAR 파일을 이미지에 복사
-COPY build/libs/*.jar /app.jar
+COPY build/libs/Geport-prototype-0.0.1-SNAPSHOT.jar /app.jar
 
 # 애플리케이션이 사용할 포트를 노출
 EXPOSE 8081
